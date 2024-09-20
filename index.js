@@ -6,9 +6,10 @@ glossary_Text = document.getElementById("exampleFormControlTextarea1")
 
 function glossary_Generate(){
 	end_abbreviation = "</def-list></glossary>"
-	final_result = "<glossary><title>Abbreviations Used</title><def-list>"
-	user_input = glossary_Text.value.split("\n")
-				     
+			   final_result = "<glossary><title>Abbreviations Used</title><def-list>"
+					  user_input = glossary_Text.value.split("\n")
+		user_input.sort();
+				    
 	for(let i = 0; i < user_input.length; i++){
 		let def_item = []
 		let forSplitting = "";
@@ -35,5 +36,3 @@ function glossary_Generate(){
 	forUserResult.value = result			    // \t
 		     }
 
-
-				
