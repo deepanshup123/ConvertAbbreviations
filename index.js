@@ -8,7 +8,8 @@ function glossary_Generate(){
 	end_abbreviation = "</def-list></glossary>"
 			   final_result = "<glossary><title>Abbreviations Used</title><def-list>"
 					  user_input = glossary_Text.value.split("\n")
-		user_input.sort();
+		user_input.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+	console.log(user_input)
 				    
 	for(let i = 0; i < user_input.length; i++){
 		let def_item = []
